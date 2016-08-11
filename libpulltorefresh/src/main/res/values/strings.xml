@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ConversationList</string>
+
+    <!-- pull to refresh-->
+    <string name="pull_down_to_refresh">"下拉即可刷新…"</string>
+    <string name="pull_down_to_release">"松开即可刷新…"</string>
+    <string name="pull_down_refreshing">"正在刷新列表…"</string>
+    <string name="pull_up_to_refresh">"上拉加载更多…"</string>
+    <string name="pull_up_to_release">"松开即可加载…"</string>
+    <string name="pull_up_refreshing">"正在加载更多…"</string>
+    <string name="pull_up_to_load_more">"加载更多"</string>
+</resources>

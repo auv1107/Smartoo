@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="item_sender_color">#313131</color>
+    <color name="item_focus_color">#FFFFFF</color>
+    <color name="load_more_pressed">#f3f3f3</color>
+</resources>

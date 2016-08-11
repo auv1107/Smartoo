@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <com.sctdroid.pullToRefresh.RefreshFooterView
+        android:id="@+id/pull_to_refresh_foot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/footer_refresh_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:layerType="software"
+            android:background="@drawable/pull_to_refresh_anim_drawable"/>
+
+        <TextView
+            android:id="@+id/footer_refresh_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="28.6dp"
+            android:alpha="0"
+            android:gravity="center_vertical"
+            android:text="@string/pull_up_to_refresh"
+            android:textColor="#777777"
+            android:textSize="15sp" />
+
+    </com.sctdroid.pullToRefresh.RefreshFooterView>
+</merge>

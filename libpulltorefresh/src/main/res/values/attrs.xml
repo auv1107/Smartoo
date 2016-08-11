@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- custom attribute for pullToRefreshListView -->
+    <declare-styleable name="PullToRefreshListView">
+        <attr name="enablePullDown" format="boolean"/>
+        <attr name="enablePullUp" format="boolean"/>
+        <attr name="pullUpStyle" format="enum">
+            <enum name="refresh" value="0"/>
+            <enum name="load" value="1"/>
+        </attr>
+        <attr name="back_ground" format="reference"/>
+        <attr name="enableSwipe" format="boolean" />
+    </declare-styleable>
+</resources>

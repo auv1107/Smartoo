@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AutoSigner</string>
+
+    <string name="nitification_content_enter">您已进入区域</string>
+    <string name="nitification_content_exit">您已离开区域</string>
+    <string name="nitification_tricker_enter">您已进入区域</string>
+    <string name="nitification_tricker_exit">您已离开区域</string>
+
+    <string name="image_not_found">Image not found</string>
+
+    <string name="reposts">转发</string>
+    <string name="comments">评论</string>
+    <string name="attitudes">赞</string>
+</resources>
