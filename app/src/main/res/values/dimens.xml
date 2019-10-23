@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--item_post-->
-    <dimen name="nine_pics_width">80dp</dimen>
-    <dimen name="nine_pics_height">80dp</dimen>
+    <dimen name="nine_pics_width">90dp</dimen>
+    <dimen name="nine_pics_height">90dp</dimen>
 </resources>

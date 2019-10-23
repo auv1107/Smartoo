@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorTextPrimary">#201D25</color>
+    <color name="colorTextHint">#A6AFC6</color>
+    <color name="colorTextSecondary">#24252F</color>
+    <color name="colorCardBackgroundHighlight">#9AEBF2F8</color>
+    <color name="colorDeepDivider">#9AEBF2F8</color>
+</resources>
