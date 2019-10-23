@@ -26,6 +26,7 @@
         <meta-data android:name="com.amap.api.v2.apikey" android:value="aa80e9fb0d77f3d69c2c246101379d3b">
 
         </meta-data>
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
         <service android:name="com.amap.api.location.APSService"></service>
         <activity android:name="com.sctdroid.autosigner.activities.MainActivity_">
             <intent-filter>

@@ -2,7 +2,7 @@ package com.sctdroid.autosigner.fragments;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.support.v4.view.ViewPager;
+import androidx.viewpager.widget.ViewPager;
 import android.widget.TextView;
 
 import com.sctdroid.autosigner.R;

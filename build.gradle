@@ -1,20 +1,78 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    repositories {
-        jcenter()
-    }
+    apply from: 'versions.gradle'
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
-
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        classpath 'com.android.tools.build:gradle:3.5.1'
+        classpath deps.android_maven_plugin
+        classpath deps.kotlin.plugin
+        classpath deps.jfrog_bintray_plugin
+        classpath deps.firebase_class_path
     }
+    repositories {
+        google()
+        jcenter()
+
+    }
+    addRepos(repositories)
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
+
     }
+    addRepos(repositories)
+}
+
+subprojects {
+    if (name == "3rdlib") return
+
+    if (name == "app") {
+        apply plugin: 'com.android.application'
+    } else {
+        apply plugin: 'com.android.library'
+    }
+    android {
+        compileSdkVersion build_versions.compile_sdk
+
+        defaultConfig {
+            minSdkVersion build_versions.min_sdk
+            targetSdkVersion build_versions.target_sdk
+            versionCode build_versions.version_code
+            versionName build_versions.version_name
+        }
+
+        compileOptions {
+            sourceCompatibility build_versions.source_compatibility
+            targetCompatibility build_versions.target_compatibility
+        }
+
+        buildTypes {
+            debug {
+                minifyEnabled false
+            }
+
+            release {
+                minifyEnabled false
+                consumerProguardFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                // Skip multidex because it follows a different versioning pattern.
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '27.1.1'
+                }
+            }
+        }
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }

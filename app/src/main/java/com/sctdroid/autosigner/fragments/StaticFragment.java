@@ -26,7 +26,7 @@ import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.IgnoredWhenDetached;
+import org.androidannotations.annotations.IgnoreWhen;
 import org.androidannotations.annotations.ViewById;
 
 import java.text.SimpleDateFormat;
@@ -89,7 +89,7 @@ public class StaticFragment extends Fragment {
     }
 
     @Background
-    @IgnoredWhenDetached
+    @IgnoreWhen(IgnoreWhen.State.DETACHED)
     void addSimulateData() {
         int count = 11;
         for (int i = 0; i < count; i++) {

@@ -20,7 +20,7 @@ import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EFragment;
-import org.androidannotations.annotations.IgnoredWhenDetached;
+import org.androidannotations.annotations.IgnoreWhen;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
 
@@ -92,7 +92,7 @@ public class TimelineFragment extends Fragment {
     }
 
     @Background
-    @IgnoredWhenDetached
+    @IgnoreWhen(IgnoreWhen.State.DETACHED)
     void fetchTimeline(int count, long max_id) {
         String statuses = mStatusesAPI.friendsTimelineSync(SINCE_ID, max_id, count, FIRST_PAGE, false, StatusesAPI.FEATURE_ORIGINAL, false);
         Log.d(TAG, statuses);
