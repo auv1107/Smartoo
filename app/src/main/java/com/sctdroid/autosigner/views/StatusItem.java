@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,7 +13,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.sctdroid.autosigner.R;
-import com.sctdroid.autosigner.presentation.ui.activities.StatusActivity;
 import com.sctdroid.autosigner.utils.FilenameUtils;
 import com.sctdroid.autosigner.utils.GlideCircleTransform;
 import com.sina.weibo.sdk.openapi.models.Status;
@@ -57,8 +57,12 @@ public class StatusItem extends RelativeLayout implements View.OnClickListener {
     List<ImageView> pics;
 
     public StatusItem(Context context) {
-        super(context);
-        setOnClickListener(this);
+        this(context, null);
+//        setOnClickListener(this);
+    }
+
+    public StatusItem(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     @Override

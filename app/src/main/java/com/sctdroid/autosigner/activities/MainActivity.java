@@ -1,11 +1,11 @@
 package com.sctdroid.autosigner.activities;
 
-import android.app.Activity;
 import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.sctdroid.autosigner.R;
 import com.sctdroid.autosigner.fragments.ProfileFragment;
-import com.sctdroid.autosigner.fragments.TimelineFragment;
 
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.FragmentById;
@@ -14,7 +14,7 @@ import org.androidannotations.annotations.FragmentById;
  * Created by lixindong on 1/19/16.
  */
 @EActivity(R.layout.activity_main)
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     @FragmentById(R.id.fragment)
     ProfileFragment fragment;

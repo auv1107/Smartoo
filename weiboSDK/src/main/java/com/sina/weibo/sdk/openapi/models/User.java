@@ -18,6 +18,7 @@ package com.sina.weibo.sdk.openapi.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * 用户信息结构体。
@@ -25,6 +26,7 @@ import org.json.JSONObject;
  * @author SINA
  * @since 2013-11-24
  */
+@Parcel
 public class User {
 
     /** 用户UID（int64） */

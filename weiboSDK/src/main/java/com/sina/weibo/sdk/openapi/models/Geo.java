@@ -18,6 +18,7 @@ package com.sina.weibo.sdk.openapi.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import android.text.TextUtils;
 
@@ -27,6 +28,7 @@ import android.text.TextUtils;
  * @author SINA
  * @since 2013-11-24
  */
+@Parcel
 public class Geo {
     
     /** 经度坐标 */

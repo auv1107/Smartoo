@@ -17,6 +17,7 @@
 package com.sina.weibo.sdk.openapi.models;
 
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * 微博可见性结构体。
@@ -24,6 +25,7 @@ import org.json.JSONObject;
  * @author SINA
  * @since 2013-11-24
  */
+@Parcel
 public class Visible {
     
     public static final int VISIBLE_NORMAL  = 0;

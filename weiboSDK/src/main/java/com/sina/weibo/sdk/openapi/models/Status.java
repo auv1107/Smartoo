@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 /**
  * 微博结构体。
@@ -28,6 +29,7 @@ import org.json.JSONObject;
  * @author SINA
  * @since 2013-11-22
  */
+@Parcel
 public class Status {
     
     /** 微博创建时间 */

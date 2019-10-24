@@ -2,16 +2,20 @@ package com.sctdroid.autosigner.fragments;
 
 import android.app.Fragment;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Toast;
 
 import com.sctdroid.autosigner.R;
 import com.sctdroid.autosigner.activities.GalleryActivity;
+import com.sctdroid.autosigner.presentation.ui.activities.StatusActivity;
 import com.sctdroid.autosigner.utils.AccessTokenKeeper;
 import com.sctdroid.autosigner.utils.Constants;
 import com.sctdroid.autosigner.views.StatusItem;
 import com.sctdroid.autosigner.views.adapter.StatusAdapter;
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import com.sina.weibo.sdk.openapi.StatusesAPI;
+import com.sina.weibo.sdk.openapi.models.Status;
 import com.sina.weibo.sdk.openapi.models.StatusList;
 import com.sctdroid.pullToRefresh.PullToRefreshBaseView;
 import com.sctdroid.pullToRefresh.PullToRefreshListView;
@@ -87,6 +91,12 @@ public class TimelineFragment extends Fragment {
             @Override
             public void onPullUpToLoad() {
                 fetchTimeline(REQUEST_COUNT, Long.parseLong(maxId));
+            }
+        });
+        listView.setOnItemClickListener((parent, view, position, id) -> {
+            if (position > 0) {
+                Status status = adapter.getItem(position - 1);
+                StatusActivity.Companion.start(getActivity(), status);
             }
         });
     }
