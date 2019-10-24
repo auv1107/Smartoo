@@ -13,7 +13,7 @@ import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
 import com.sctdroid.autosigner.R;
-import com.sctdroid.autosigner.activities.MainActivity_;
+import com.sctdroid.autosigner.activities.MainActivity;
 import com.sctdroid.autosigner.databases.RecordHelper;
 import com.sctdroid.autosigner.models.Record;
 import com.sctdroid.autosigner.utils.Constants;
@@ -77,7 +77,7 @@ public class GeoFenceReceiver extends BroadcastReceiver {
     }
 
     public PendingIntent getDefalutIntent(Context context, int flags){
-        PendingIntent pendingIntent= PendingIntent.getActivity(context, 1, new Intent(context, MainActivity_.class), flags);
+        PendingIntent pendingIntent= PendingIntent.getActivity(context, 1, new Intent(context, MainActivity.class), flags);
         return pendingIntent;
     }
 }

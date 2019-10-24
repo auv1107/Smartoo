@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/main.xml"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.sctdroid.autosigner.fragments.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_timelineFragment"
+            app:destination="@id/timelineFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timelineFragment"
+        android:name="com.sctdroid.autosigner.fragments.TimelineFragment"
+        android:label="TimelineFragment" >
+        <action
+            android:id="@+id/action_timelineFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.sctdroid.autosigner.fragments.StatusFragment"
+        android:label="StatusFragment" />
+</navigation>
