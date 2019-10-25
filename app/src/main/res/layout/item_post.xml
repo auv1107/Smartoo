@@ -211,6 +211,7 @@
     </LinearLayout>
 
     <View
+        android:id="@+id/bottomDivider"
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="@color/colorDeepDivider"

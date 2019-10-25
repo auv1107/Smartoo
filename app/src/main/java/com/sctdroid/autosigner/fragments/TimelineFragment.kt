@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.Toast
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.sctdroid.autosigner.R
 import com.sctdroid.autosigner.activities.GalleryActivity
+import com.sctdroid.autosigner.fragments.status.StatusFragment
 import com.sctdroid.autosigner.utils.AccessTokenKeeper
 import com.sctdroid.autosigner.utils.Constants
 import com.sctdroid.autosigner.views.StatusItem

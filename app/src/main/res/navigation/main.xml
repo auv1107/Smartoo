@@ -21,6 +21,6 @@
     </fragment>
     <fragment
         android:id="@+id/statusFragment"
-        android:name="com.sctdroid.autosigner.fragments.StatusFragment"
+        android:name="com.sctdroid.autosigner.fragments.status.StatusFragment"
         android:label="StatusFragment" />
 </navigation>

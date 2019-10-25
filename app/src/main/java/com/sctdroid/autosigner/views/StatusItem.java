@@ -53,6 +53,9 @@ public class StatusItem extends RelativeLayout implements View.OnClickListener {
     @ViewById(R.id.attitudes)
     TextView attitudes;
 
+    @ViewById(R.id.bottomDivider)
+    View bottomDivider;
+
     @ViewsById({R.id.pic0, R.id.pic1, R.id.pic2, R.id.pic3, R.id.pic4, R.id.pic5, R.id.pic6, R.id.pic7, R.id.pic8})
     List<ImageView> pics;
 
@@ -136,5 +139,9 @@ public class StatusItem extends RelativeLayout implements View.OnClickListener {
             urls.add(origin_prefix + "/" + FilenameUtils.getBasename(url));
         }
         return urls;
+    }
+
+    public void showDivider(boolean show) {
+        bottomDivider.setVisibility(show ? View.VISIBLE : View.GONE);
     }
 }

@@ -1,7 +1,5 @@
 package com.antiless.support.fragment;
 
-import android.os.Bundle;
-
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -14,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.antiless.support.BaseFragment;
 import com.antiless.support.R;
 import com.antiless.support.widget.tablayout.TabLayout;
 
@@ -23,7 +22,7 @@ import java.util.List;
  * Created by lixindong on 2018/8/11.
  */
 
-public abstract class TabFragment extends Fragment {
+public abstract class TabFragment extends BaseFragment {
 
     protected TabLayout mTabLayout;
     protected ViewPager mViewPager;
@@ -34,7 +33,7 @@ public abstract class TabFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container) {
         View root = inflater.inflate(getLayoutId(), container, false);
         return root;
     }
@@ -44,8 +43,7 @@ public abstract class TabFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onViewCreated(View view) {
         findViews(view);
         initViews(view);
     }

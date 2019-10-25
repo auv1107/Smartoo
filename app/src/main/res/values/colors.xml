@@ -5,4 +5,5 @@
     <color name="colorTextSecondary">#24252F</color>
     <color name="colorCardBackgroundHighlight">#9AEBF2F8</color>
     <color name="colorDeepDivider">#9AEBF2F8</color>
+    <color name="colorDeeperDivider">#EBF2F8</color>
 </resources>
