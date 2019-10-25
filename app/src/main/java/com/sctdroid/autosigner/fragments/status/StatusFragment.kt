@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment
 import com.antiless.support.fragment.TabFragment
 import com.antiless.support.fragment.list.RecyclerViewFragment
 import com.sctdroid.autosigner.R
+import com.sctdroid.autosigner.activities.GalleryActivity
+import com.sctdroid.autosigner.views.StatusItem
 import com.sina.weibo.sdk.openapi.models.Comment
 import com.sina.weibo.sdk.openapi.models.Status
 import kotlinx.android.synthetic.main.fragment_status.*
@@ -40,6 +42,7 @@ class StatusFragment : TabFragment() {
         super.onViewCreated(view)
         statusItem.bind(status)
         tabLayout.visibility = View.GONE
+        statusItem.setOnImageClickListener { position, urls -> GalleryActivity.viewPictures(activity, position, urls) }
     }
 
     override fun getFragmentList(position: Int): Fragment {
