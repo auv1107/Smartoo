@@ -16,7 +16,9 @@ import com.sctdroid.autosigner.R;
 import com.sctdroid.autosigner.utils.FilenameUtils;
 import com.sctdroid.autosigner.utils.GlideCircleTransform;
 import com.sina.weibo.sdk.openapi.models.Status;
+import com.sina.weibo.sdk.openapi.models.User;
 
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.UiThread;
 import org.androidannotations.annotations.ViewById;
@@ -76,15 +78,28 @@ public class StatusItem extends RelativeLayout implements View.OnClickListener {
     public interface OnImageClickListener {
         void onImageClicked(int position, ArrayList<String> urls);
     }
+    public interface OnAvatarClickListener {
+        void onImageClicked(Status status);
+    }
 
     private OnImageClickListener mListener;
+    private OnAvatarClickListener mAvatarClickListener;
 
     public void setOnImageClickListener(OnImageClickListener listener) {
         mListener = listener;
     }
+    public void setOnAvatarClickListener(OnAvatarClickListener listener) {
+        mAvatarClickListener = listener;
+    }
 
+    @Click(R.id.avatar)
+    void onAvatarClicked() {
+        if (mAvatarClickListener != null) mAvatarClickListener.onImageClicked(status);
+    }
+    private Status status;
     @UiThread
     public void bind(Status status) {
+        this.status = status;
         if (status == null) return;
         Log.d(TAG, "user " + status.user.name);
         if (!TextUtils.isEmpty(status.user.avatar_large)) {

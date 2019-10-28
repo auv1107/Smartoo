@@ -25,8 +25,12 @@ class StatusAdapter(val context: Context) : BaseAdapter() {
     }
 
     var mListener: OnImageClickListener? = null
+    var mOnAvatarClickListener: StatusItem.OnAvatarClickListener? = null
     fun setOnImageClickListener(listener: OnImageClickListener?) {
         mListener = listener
+    }
+    fun setOnAvatarClickListener(listener: StatusItem.OnAvatarClickListener?) {
+        mOnAvatarClickListener = listener
     }
 
     override fun getItemId(i: Int): Long {
@@ -41,6 +45,7 @@ class StatusAdapter(val context: Context) : BaseAdapter() {
         }
         item.bind(getItem(i))
         item.setOnImageClickListener(mListener)
+        item.setOnAvatarClickListener(mOnAvatarClickListener)
         return item
     }
 

@@ -64,6 +64,7 @@ open class TimelineFragment : BaseNavigationFragment() {
 
     private fun initListView() {
         adapter.setOnImageClickListener(StatusItem.OnImageClickListener { position, urls -> GalleryActivity.viewPictures(activity, position, urls) })
+        adapter.setOnAvatarClickListener(StatusItem.OnAvatarClickListener { NavHostFragment.findNavController(this).navigate(R.id.action_timelineFragment_to_userFragment) })
         listView!!.setAdapter(adapter)
         listView!!.showLoadMore()
         listView!!.setRefreshListener(object : RefreshListener {

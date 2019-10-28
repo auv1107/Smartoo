@@ -18,9 +18,16 @@
         <action
             android:id="@+id/action_timelineFragment_to_statusFragment"
             app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_timelineFragment_to_userFragment"
+            app:destination="@id/userFragment" />
     </fragment>
     <fragment
         android:id="@+id/statusFragment"
         android:name="com.sctdroid.autosigner.fragments.status.StatusFragment"
         android:label="StatusFragment" />
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.sctdroid.autosigner.fragments.UserFragment"
+        android:label="UserFragment" />
 </navigation>
